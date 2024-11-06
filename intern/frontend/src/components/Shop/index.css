@@ -1,0 +1,21 @@
+.card-img-container {
+    padding-top: 125%;
+    width: 100%;
+    position: relative;
+}
+
+.card-img-container img {
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    border-radius: 10px;
+}
