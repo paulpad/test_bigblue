@@ -37,24 +37,24 @@ const Shop = (props) => {
                   <table className="table">
                     <tbody>
                       <tr>
+                      <td>                      
+                        {/* if we hit 0 in stock, the add to cart button disappear */}
+                        {props.availableProducts[product.id] != 0 && (<button
+                          onClick={() => props.onAddToCart(product.id)}
+                          className="btn btn-primary btn-sm"
+                          style = {{fontSize: "15px"}}>
+                          Add
+                          </button>
+                          )}
+                      </td>
                       <td>
-                        {/* If the cart is not empty, display the delete button */}
+                          {/* If the cart is not empty, display the delete button */}
                         {props.inCartProducts[product.id] > 0 && (<button
                           onClick={() => props.onDeleteFromCart(product.id)}
                           className="btn btn-danger btn-sm"
                           style={{ fontSize: "15px" }}>
                           Delete
                         </button>)}
-                      </td>
-                      <td>
-                          {/* if we hit 0 in stock, the add to cart button disappear */}
-                          {props.availableProducts[product.id] != 0 && (<button
-                          onClick={() => props.onAddToCart(product.id)}
-                          className="btn btn-primary btn-sm"
-                          style = {{fontSize: "15px", position: "center"}}>
-                          Add
-                          </button>
-                          )}
                       </td>
                       </tr>       
                     </tbody>
